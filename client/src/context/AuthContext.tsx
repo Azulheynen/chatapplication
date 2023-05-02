@@ -1,11 +1,11 @@
-import { useMutation } from '@tanstack/react-query'
-import axios from 'axios'
+import { UseMutationResult, useMutation } from '@tanstack/react-query'
+import axios, {AxiosResponse} from 'axios'
 import {ReactNode, createContext, useContext} from 'react'
 
 const Context = createContext<AuthContext | null>(null)
 
 type AuthContext ={
-
+ signup: UseMutationResult<AxiosResponse, unknown, User>
 }
 type User = {
     id: string,
@@ -32,7 +32,7 @@ export function AuthProvider( {children}:AuthProviderProps){
         }
 
     })
-    return <Context.Provider value={{}}>
+    return <Context.Provider value={{signup}}>
         {children}
     </Context.Provider>
 

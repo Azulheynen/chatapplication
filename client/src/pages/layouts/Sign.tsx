@@ -15,8 +15,8 @@ export function Sign(){
             <Input  id="userName"  pattern="\S*" required  ref={usernameRef}/>
              <label htmlFor = "name">Name</label>
             <Input  id="name"   ref={nameRef}/>
-             <label htmlFor ="imageUrl">Image Url</label>
-            <Input  id="imageUrl" type="url"  required  ref={imageUrlRef}/>
+             <label htmlFor ="imageUrl ">Image Url</label>
+            <Input  id="imageUrl" type="url"  ref={imageUrlRef}/>
             <Button type='submit' className="col-span-full">  Submit</Button>
         </form>
         </>

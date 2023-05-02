@@ -6,11 +6,17 @@ import { Home } from "./pages/layouts/Home.tsx";
 
 export const router = createBrowserRouter([
     {
- element: <AuthLayout />,
+        element: <ContextWreapper />,
+        children: [
+            {
+        element: <AuthLayout />,
         children: [
             {path: "/login", element: <Login />},
             {path: "/sign",  element: <Sign />},
             {path: "/" , element: <Home />} 
         ]
-    }
+
+        }
+        ],
+}
 ])
