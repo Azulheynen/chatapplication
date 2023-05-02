@@ -1,0 +1,12 @@
+import {FastifyInstance} from "fastify"
+import { stringify } from "querystring";
+
+export async function userRoutes(app: FastifyInstance){
+    app.post<{Body: {id: string; name: string; image?: string}}> ("/sing", async (req,res) => {
+        const {id , name, image} = req.body
+        if(id ===null || id === "" || name ===null || name === ""){
+            return res.status(400).send()
+
+        }
+    })
+}

@@ -4,7 +4,7 @@ import {ReactNode, createContext, useContext} from 'react'
 
 const Context = createContext<AuthContext | null>(null)
 
-type AuthContext {
+type AuthContext ={
 
 }
 type User = {
@@ -19,12 +19,12 @@ export function useAuth(){
 } 
 
 
-type AuthProviderProps {
+type AuthProviderProps ={
  children: ReactNode
 }
 
 
-function AuthProvider( {children}:AuthProviderProps){
+export function AuthProvider( {children}:AuthProviderProps){
    
     const signup = useMutation({
         mutationFn: (user: User) => {

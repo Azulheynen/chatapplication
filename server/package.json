@@ -13,9 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cors": "^8.2.1",
     "dotenv": "^16.0.3",
     "fastify": "^4.17.0",
-    "tsc": "^2.0.4"
+    "tsc": "^2.0.4",
+    "axios": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",
